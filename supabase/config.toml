@@ -1,0 +1,2 @@
+[functions.generate-match]
+verify_jwt = false
