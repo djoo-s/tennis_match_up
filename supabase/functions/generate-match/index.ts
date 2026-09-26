@@ -7,8 +7,8 @@ const SECRET_KEY = SECRET_KEYS["default"] ?? "";
 const SECRET_KEY = Deno.env.get("SUPABASE_SECRET_KEY") ?? "";
 const CRON_SECRET = Deno.env.get("CRON_SECRET") ?? "";
 
-if (!SUPABASE_URL || !SECRET_KEY || !CRON_SECRET) {
-  throw new Error("Missing required environment variables");
+if (!SUPABASE_URL || !SECRET_KEY) {
+  throw new Error("Missing required Supabase environment variables");
 }
 
 const sb = createClient(SUPABASE_URL, SECRET_KEY, {
